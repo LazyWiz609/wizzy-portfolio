@@ -1,0 +1,59 @@
+
+.nav{
+    display: flex;
+    background-color: black;
+    padding: 1rem;
+    position: absolute;
+    z-index: 10;
+    width: 90vw;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.name,
+.menu,
+.switch {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.name{
+    justify-content: flex-start;
+    font-family: var(--typography-font-family-primary-font, Sora);
+    font-size: var(--values-sizing-48, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--values-spacing-56, 40px); /* 116.667% */
+    letter-spacing: -0.5px;
+}
+.switch{
+    justify-content: flex-end;
+}
+.menu{
+    font-family: var(--typography-font-family-primary-font, Sora);
+    font-size: var(--values-sizing-28, 20px);
+    font-style: normal;
+    font-weight: 200;
+    line-height: var(--values-spacing-36, 28px); /* 128.571% */
+    letter-spacing: -0.15px;
+}
+.menu ul{
+    display: flex;
+
+    gap: 1rem;
+    list-style: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a:hover{
+    font-weight: 400;
+}
