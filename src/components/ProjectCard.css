@@ -1,0 +1,44 @@
+.card{
+    display: flex;
+    background-color: white;
+    padding: var(--values-spacing-48, 48px);
+    align-items: center;
+    gap: var(--values-spacing-96, 96px);
+    align-self: stretch;
+    border-radius: var(--radii-l, 20px);
+    border: 1px solid var(--color-border-deafult, #B2C7DE);
+    background: var(--color-background-default, #F3F6FA);
+    width: 60vw;
+}
+.card-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.col-t-primary{
+    color: var(--color-text-primary, #363C43);
+}
+.col-t-secondary{
+    color: var(--color-text-secondary, #44505A);
+}
+.git-btn-card{
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--colors-neutral-900, #3E496A);
+    background: var(--colors-neutral-950, #292F42);
+}
+.button-sec-2{
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--values-spacing-24, 24px);
+}
+.car-custom{
+    width: 230.61px;
+    height: 123.691px;
+    aspect-ratio: 230.61/123.69;
+    transform: scaleX(-1);
+}

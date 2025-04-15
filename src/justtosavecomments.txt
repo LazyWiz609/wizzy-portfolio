@@ -1,0 +1,20 @@
+{/* <Link to='/about' style={{textDecoration: 'none'}}>
+    <button className="explore-btn">
+     <ion-icon name="call" className="explore-icon-size"></ion-icon>
+        Contact
+    </button>
+ </Link> */}
+
+  {/* <Link to='https://www.linkedin.com/in/priyanshuwiz/' style={{textDecoration: 'none'}}>
+     <button className="linkedin-btn">
+     <ion-icon name="logo-linkedin" className="linkedin-icon-size"></ion-icon>
+         LinkedIn
+     </button>
+ </Link> */}
+
+  {/* <Link to='https://github.com/LazyWiz609' style={{textDecoration: 'none'}}>
+      <button className="git-btn">
+      <ion-icon name="logo-github" className="git-icon-size"></ion-icon>
+          Github
+      </button>
+   </Link> */}

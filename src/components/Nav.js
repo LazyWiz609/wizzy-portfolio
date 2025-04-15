@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import './Nav.css';
 import { Link, useLocation } from 'react-router-dom';
 
 function Nav(props){
     const location = useLocation();
-    const [bold, setBold] = useState({fontWeight:400});
     return(
     <div className="nav">
             <div className="name">
@@ -20,8 +19,13 @@ function Nav(props){
                 </ul>
             </div>
 
-            <div className="switch">
-                <button>Switch</button>
+            <div className="resume-down">
+            <Link to='/resume' style={{textDecoration: 'none'}}>
+                <button className="down-btn">
+                <ion-icon name="eye-outline" className="resume-icon"></ion-icon>
+                    View Resume
+                </button>
+                </Link>
             </div>
     </div>
     )
