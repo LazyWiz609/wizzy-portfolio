@@ -1,0 +1,76 @@
+.title-heading-d{
+    font-family: var(--typography-font-family-primary-font, Sora);
+    font-size: var(--values-sizing-48, 40px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--values-spacing-56, 48px); /* 116.667% */
+    letter-spacing: -0.5px;
+}
+
+.title-heading-m{
+    font-family: var(--typography-font-family-primary-font, Sora);
+    font-size: var(--values-sizing-32, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--values-spacing-40, 32px); /* 125% */
+    letter-spacing: -0.5px;
+}
+
+.title-d{
+    font-family: var(--typography-font-family-primary-font, Sora);
+    font-size: var(--values-sizing-36, 28px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--values-spacing-44, 36px); /* 122.222% */
+    letter-spacing: -0.25px;
+}
+
+.title-med-d{
+    font-family: var(--typography-font-family-primary-font, Sora);
+    font-size: var(--values-sizing-28, 20px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--values-spacing-36, 28px); /* 128.571% */
+    letter-spacing: -0.15px; 
+}
+
+.title-smol-d{
+    font-family: var(--typography-font-family-primary-font, Sora);
+    font-size: var(--values-sizing-22, 22px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--values-spacing-28, 28px); /* 127.273% */
+    letter-spacing: -0.1px;
+}
+
+.body-lg{
+    font-family: var(--typography-font-family-secondary-font, Rubik);
+    font-size: var(--values-sizing-18, 18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--values-spacing-28, 28px); /* 155.556% */
+}
+
+.body-base{
+    font-family: var(--typography-font-family-secondary-font, Rubik);
+    font-size: var(--values-sizing-16, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--values-spacing-24, 24px); /* 150% */
+}
+
+.body-sm{
+    font-family: var(--typography-font-family-secondary-font, Rubik);
+    font-size: var(--values-sizing-14, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--values-spacing-20, 20px); /* 142.857% */
+}
+
+.body-xsm{
+    font-family: var(--typography-font-family-secondary-font, Rubik);
+    font-size: var(--values-sizing-12, 12px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--values-spacing-16, 16px); /* 133.333% */
+}

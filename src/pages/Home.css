@@ -1,0 +1,295 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #292F42;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/constellation.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-1{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+}
+.jumbo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+    gap: var(--values-spacing-128, 128px);
+    flex-shrink: 0;
+}
+.jumbo-left{
+    display: flex;
+    width: 251.25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28.7055px;
+    flex-shrink: 0;
+}
+.jumbo-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--values-spacing-18, 24px);
+}
+.home-img{
+    width: 251.25px;
+    height: 378.75px;
+    aspect-ratio: 67/101;
+}
+.colorboxes{
+    display: flex;
+}
+
+.bluebox, .purplebox{
+    width: 38.274px;
+    height: 38.274px;
+    border-radius: 9.568px;
+}
+.bluebox{
+    border: 3.189px solid var(--colors-primary-900, #223E86);
+    background: var(--colors-primary-400, #66A9F4);
+}
+.purplebox{
+    border: 3.189px solid var(--colors-secondary-900, #51267D);
+    background: var(--colors-secondary-400, #BA8FF1);
+}
+.title-text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+}
+.title-below-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--values-spacing-36, 20px);
+    align-self: stretch;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    width: 476px;
+}
+/*Github, Linekdin, Explore - Button*/
+.github-icon,
+.linkedin-icon,
+.explore-icon{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.github-icon{
+    justify-content: flex-start;
+}
+
+.explore-icon{
+    justify-content: flex-end;
+}
+
+.linkedin-btn,
+.git-btn,
+.explore-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10.118px 15.176px;
+    gap: 10.118px;  
+    color: white;
+    color: var(--color-text-inverse, #F4F6F7);
+    font-family: var(--typography-font-family-secondary-font, Rubik);
+    font-size: 17.706px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.294px;
+}
+
+.git-btn{
+    border: 1.265px solid var(--colors-neutral-900, #3E496A);
+    background: var(--colors-neutral-950, #292F42);
+    box-shadow: 0px 3.163px 3.163px 0px rgba(0, 0, 0, 0.25);
+}
+.git-btn:hover{
+    border: 1px solid var(--colors-neutral-950, #292F42);
+    background: var(--colors-neutral-900, #3E496A);
+}
+.git-btn:active{
+    border: 1px solid var(--colors-neutral-950, #292F42);
+    background: var(--colors-text-950, #1B1F23);
+}
+
+.linkedin-btn{
+    border: 1.265px solid #024E79;
+    background: #0072B1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.linkedin-btn:hover{
+    border: 1px solid #0072B1;
+    background: #024E79;
+}
+.linkedin-btn:active{
+    border: 1px solid #054F78;
+    background: #033F61;
+}
+
+.explore-btn{
+    border: 1.897px solid var(--color-border-emphasis, #5467A1);
+    background: var(--color-background-subtle, #D2DDEB);
+    box-shadow: 0px 3.163px 3.163px 0px rgba(0, 0, 0, 0.25);
+    color: var(--color-text-primary, #363C43);
+}
+.explore-btn:hover{
+    border: 1.5px solid var(--color-border-strong, #728EBF);
+    background: var(--color-background-elevated, #B2C7DE);
+    color: var(--color-text-secondary, #44505A);
+}
+.explore-btn:active{
+    border: 1.5px solid var(--color-border-subtle, #D2DDEB);
+    background: var(--color-background-inverse, #3E496A);
+    color: var(--color-text-inverse, #F4F6F7);
+}
+
+.git-icon-size,
+.linkedin-icon-size,
+.explore-icon-size{
+        font-size: 24px;
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 32px;
+}
+
+/*Section-2*/
+
+.section-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--color-background-default, #F3F6FA);
+    border-radius: 48px 48px 0px 0px;
+    padding: 64px;
+}
+
+.card-separator{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.cardWrap{
+    display: flex;
+    justify-content: space-between;
+    width: 125%;
+    align-self: center;
+    position: relative;
+}
+
+.lineDot{
+    display: flex;
+}
+
+.dot{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: var(--colors-neutral-950, #292F42);
+    z-index: 2;
+}
+
+.lineAdder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.line{
+    position: absolute;
+    right: 17px;
+    width: 3px;
+    height: 108%;
+    border-left: 3px dotted transparent;
+    border-image: repeating-linear-gradient(
+    to bottom,
+    #3E496A 0,
+    #3E496A 8px,
+    transparent 2px,
+    transparent 16px
+  ) 1;
+}
+
+/*Section 3*/
+
+.section-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+    color: white;
+    width: 70%;
+}
+.text-sec-3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.sec-3-btn{
+    display: flex;
+    gap: 56px;
+}
+
+.col-left{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.cupimg{
+    width: 322.5px;
+    height: 244.65525px;
+}
