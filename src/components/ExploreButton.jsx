@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default function ExploreButton({ label, scale = 1, name, iconName, showIcon = true }) {
+export default function ExploreButton({ label, scale = 1, name, iconName, showIcon = true, width = 'auto' }) {
   const scaledStyle = {
     padding: `${10.118 * scale}px ${15.176 * scale}px`,
     fontSize: `${17.706 * scale}px`,
     gap: `${10.118 * scale}px`,
+    width: `${width}`,
   };
 
   const iconStyle = {
