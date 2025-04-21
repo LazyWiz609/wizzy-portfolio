@@ -27,35 +27,50 @@ export default function About() {
       {/* Section-1 */}
 
 
-        <div className='flex flex-col items-center justify-center'>
-            <div className='flex items-center justify-between min-h-screen w-[70vw]'>
-              <div className='flex flex-col items-center'>
-              <img src={Chara} alt='LazyChara' className="w-[251.25px] h-[378.75px]"/>
-              <div className='flex gap-4'>
-                <div className='w-[38.274px] h-[38.274px] rounded-[9.568px] border-[3.189px] border-[#223E86] bg-[#66A9F4]'></div>
-                <div className='w-[38.274px] h-[38.274px] rounded-[9.568px] border-[3.189px] border-[#51267D] bg-[#BA8FF1]'></div>
-              </div>
-              </div>
-              <div>
-                <div className='self-stretch h-28 flex flex-col justify-center items-start gap-2'>
-                  <div className='self-stretch justify-start text-white text-[44px] font-bold font-sora leading-[44px]'>Hi,</div>
-                  <div className='self-stretch justify-start text-white text-[44px] font-bold font-sora leading-[44px]'>I’m Lazy Wiz</div>
-                </div>
-                <div className='self-stretch inline-flex flex-col justify-start items-start gap-9 mt-[12px]'>
-                  <div className='w-[575px] justify-start text-white text-[24px] font-normal font-sora leading-[28px]'>Web / Full-Stack Developer with a little bit of everything.</div>
-                  <div className='w-[575px] justify-start text-white text-[24px] font-semibold font-sora leading-[28px]'>250+ Designs Made | 5 ⭐ @ Hackerrank</div>
-                  <div className='flex justify-start items-center gap-12'>
-                    <GithubButton/>
-                    <LinkedinButton/>
-                    <ExploreButton name={"Resume"} iconName={"document-text-outline"}/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='absolute bottom-[32px]'>
-            <ion-icon name="arrow-down-outline" style={{color:'white', fontSize: '28px'}}></ion-icon>
+      <div className='flex flex-col items-center justify-center min-h-[60vh] md:min-h-screen relative'>
+  <div className='flex flex-col md:flex-row items-center justify-center w-[90vw] md:w-[70vw] gap-12'>
+
+    {/* Character Section - Hidden on small screens */}
+    <div className='hidden md:flex flex-col items-center'>
+      <img src={Chara} alt='LazyChara' className="w-[251.25px] h-auto" />
+      <div className='flex gap-4 mt-4'>
+        <div className='w-[38px] h-[38px] rounded-[10px] border-[3px] border-[#223E86] bg-[#66A9F4]'></div>
+        <div className='w-[38px] h-[38px] rounded-[10px] border-[3px] border-[#51267D] bg-[#BA8FF1]'></div>
+      </div>
+    </div>
+
+    {/* Intro Text Section */}
+    <div className='flex flex-col justify-center items-center md:items-start text-center md:text-left gap-6'>
+      <div className='flex flex-col gap-1'>
+        <div className='text-white text-[36px] md:text-[44px] font-bold font-sora leading-[44px]'>Hi,</div>
+        <div className='text-white text-[36px] md:text-[44px] font-bold font-sora leading-[44px]'>I’m Lazy Wiz</div>
+      </div>
+      <div className='flex flex-col items-center md:items-start gap-6'>
+        <div className='max-w-[90vw] md:w-[575px] text-white text-[18px] md:text-[24px] font-normal font-sora leading-[28px]'>
+          Web / Full-Stack Developer with a little bit of everything.
+        </div>
+        <div className='max-w-[90vw] md:w-[575px] text-white text-[18px] md:text-[24px] font-semibold font-sora leading-[28px]'>
+          250+ Designs Made | 5 ⭐ @ Hackerrank
+        </div>
+        <div className='flex justify-center md:justify-start items-center gap-6 md:gap-12'>
+          <GithubButton />
+          <LinkedinButton />
+          <div className="hidden lg:block">
+            <ExploreButton name={"Resume"} iconName={"document-text-outline"} />
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Down Arrow */}
+  <div className='absolute bottom-[32px]'>
+    <ion-icon name="arrow-down-outline" style={{ color: 'white', fontSize: '28px' }}></ion-icon>
+  </div>
+</div>
+
+
+
 
         {/* Section-2 */}
 
@@ -92,17 +107,17 @@ export default function About() {
 
         {/* Stats */}
         <div className='flex flex-col items-center justify-center gap-16 w-[80vw]'>
-          <div className='flex justify-center gap-32'>
-            <div className='flex justify-between items-center gap-7'>
+          <div className='flex flex-col justify-center gap-6 md:flex-row lg:justify-between md:gap-14'>
+            <div className='flex justify-center items-center gap-7'>
               <span className='justify-start text-[#292F42] text-[20px] font-normal font-rubik leading-9'>Design:</span>
               <div className="w-80 h-7 bg-[#A066E8]"></div>
             </div>
-            <div className='flex justify-between items-center gap-7'>
+            <div className='flex justify-center items-center gap-7'>
             <span className='justify-start text-[#292F42] text-[20px] font-normal font-rubik leading-9'>Dev:</span>
             <div className="w-70 h-7 bg-[#66A9F4]"></div>
             </div>
           </div>
-          <div className='flex justify-center gap-32'>
+          <div className='flex justify-center flex-col gap-8 md:flex-row md:gap-32'>
             <div className='flex items-center gap-4'>
               <img src={Spotify} alt='spotify'/>
               <div className="justify-start text-black text-[16px] font-semibold font-sora leading-7">2970+ Minutes Listened</div>
@@ -134,21 +149,21 @@ export default function About() {
         <div className="w-8 h-8 rounded-full bg-gray-200 z-10"></div>
         <div className="w-8 h-8 rounded-full bg-gray-200 z-10"></div>
       </div>
-      <div className='flex justify-end items-center gap-28 mt-[64px]'>
-      <div className='inline-flex flex-col justify-start items-start gap-12'>
+      <div className='flex justify-end items-center gap-28 mt-[64px] px-[5%] md:px-[5%] lg:px-0'>
+      <div className='inline-flex flex-col justify-start items-start gap-12 md:justify-start'>
         <div className='self-stretch inline-flex flex-col justify-start items-start gap-6'>
-          <div className='self-stretch justify-start text-white text-3xl font-semibold font-sora leading-9'>2015 - Spark </div>
-          <div className='self-stretch justify-start text-white text-lg font-normal font-rubik leading-7'>At 10, I launched my first YouTube channel to teach others how to embed games on Blogger. <br/>Along the way, I stumbled into HTML and CSS—my first taste of creating something from nothing.</div>
+          <div className='self-stretch justify-start text-white text-3xl font-semibold font-sora leading-9 text-center md:text-left'>2015 - Spark </div>
+          <div className='self-stretch justify-start text-white text-lg font-normal font-rubik leading-7 text-center md:text-left '>At 10, I launched my first YouTube channel to teach others how to embed games on Blogger. <br/>Along the way, I stumbled into HTML and CSS—my first taste of creating something from nothing.</div>
         </div>
-        <div className='inline-flex justify-start items-center gap-6'>
+        <div className='inline-flex items-center gap-6 justify-start md:justify-center'>
           <ExploreButton name={"Read the full Blog"} iconName={"arrow-redo-outline"}/>
           <PurpleButton name={"Give a feedback"} iconName={"arrow-redo-outline"}/>
         </div>
       </div>
-      <img src={RubikCube} alt="rubik-cube" />
+      <img src={RubikCube} alt="rubik-cube" className='hidden md:block'/>
       </div>
 
-    <div className="absolute bottom-0 w-full flex justify-between items-end">
+    <div className="absolute bottom-0 w-full justify-between items-end hidden md:flex">
       <img src={Toy} alt="toy" className="h-auto" />
       <img src={Train} alt="train" className="h-auto"/>
       <img src={Think} alt="thinking" className="h-auto" />
@@ -216,14 +231,14 @@ export default function About() {
 
       <div className='relative flex flex-col items-center justify-start min-h-screen py-32 overflow-hidden'>
         <div className='flex flex-col absolute top-1/5 items-center gap-2'>
-          <div class="relative inline-block">
+          <div className="relative inline-block">
       {/* <!-- Glowing text behind --> */}
-            <div class="absolute inset-0 text-white text-5xl font-bold font-sora leading-[56px] blur-sm opacity-60">
+            <div className="absolute inset-0 text-white text-5xl font-bold font-sora leading-[56px] blur-sm opacity-60">
               One Star at a Time...
             </div>
             
             {/* <!-- Main visible text --> */}
-            <div class="relative text-white text-5xl font-bold font-sora leading-[56px]">
+            <div className="relative text-white text-5xl font-bold font-sora leading-[56px]">
               One Star at a Time...
             </div>
           </div>

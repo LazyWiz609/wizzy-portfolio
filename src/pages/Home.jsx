@@ -14,12 +14,14 @@ import PurpleButton from '../components/PurpleButton';
 export default function Home() {
   return (
 <div className='wrapper'>
+
+    {/* Section-1 */}
+
     <div className='section-1'>
         <div className='jumbo'>
         <div className='jumbo-left'>
-            <div>
+
                 <img src={Homeimg} alt='LazyChara' className="home-img"/>
-            </div>
 
             <div className='colorboxes'>
                 <div className='bluebox'>
@@ -54,6 +56,9 @@ export default function Home() {
             <ion-icon name="arrow-down-outline" style={{color:'white', fontSize: '28px'}}></ion-icon>
         </div>
     </div>
+
+    {/* Section-2 */}
+
     <div className="section-2">
             <div className="title-heading-d" style={{color:'#1B1F23', margin: '32px 0px 64px 0px'}}>Projects</div>
         <div className='lineAdder'>
@@ -79,6 +84,9 @@ export default function Home() {
 
         </div>
     </div>
+
+    {/* Section-3 */}
+
     <div className="section-3">
         <div className="col-left">
             <div className='text-sec-3'>

@@ -1,70 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 function Nav() {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const navLinks = ["/", "/projects", "/about", "/blog"];
+  const labels = ["Home", "Projects", "About", "Blog"];
+
   return (
-    <div className="flex items-center justify-between px-8 py-6 w-[90vw] absolute top-0 left-0 right-0 z-10 mx-auto">
-      {/* Brand Name */}
-      <div className="text-white font-bold text-[32px] leading-[40px] tracking-[-0.5px] font-[Sora]">
-        LazyWiz
-      </div>
+    <div className="absolute top-[3vh] left-0 right-0 z-50">
+      <div className="w-full max-w-[1600px] mx-auto px-[5vw] flex items-center justify-between">
+        {/* Brand Name */}
+        <div className="text-white font-bold font-sora text-[clamp(1.5rem,4vw,2.5rem)] leading-tight tracking-[-0.5px]">
+          LazyWiz
+        </div>
 
-      {/* Menu */}
-      <div className="font-[Sora] text-[20px] font-extralight leading-[24px] tracking-[-0.15px]">
-        <ul className="flex gap-4 list-none">
-          <li>
-            <Link
-              to="/"
-              className={`text-white no-underline ${
-                location.pathname === "/" ? "font-bold" : "font-normal"
-              }`}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/projects"
-              className={`text-white no-underline ${
-                location.pathname === "/projects" ? "font-bold" : "font-normal"
-              }`}
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className={`text-white no-underline ${
-                location.pathname === "/about" ? "font-bold" : "font-normal"
-              }`}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/blog"
-              className={`text-white no-underline ${
-                location.pathname === "/blog" ? "font-bold" : "font-normal"
-              }`}
-            >
-              Blog
-            </Link>
-          </li>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-[clamp(1rem,2.5vw,2rem)] list-none font-sora text-[clamp(1rem,1.5vw,1.3rem)] font-light tracking-tight">
+          {navLinks.map((path, idx) => (
+            <li key={path}>
+              <Link
+                to={path}
+                className={`text-white no-underline transition duration-150 ${
+                  location.pathname === path ? "font-bold" : "font-normal"
+                }`}
+              >
+                {labels[idx]}
+              </Link>
+            </li>
+          ))}
         </ul>
+
+        {/* Desktop Resume Button */}
+        <div className="hidden md:block ml-[clamp(0.5rem,2vw,1.5rem)]">
+          <Link to="/resume" className="no-underline">
+            <button className="flex items-center justify-center gap-2 px-[clamp(1rem,2vw,1.5rem)] py-[clamp(0.5rem,1vw,0.8rem)] border border-[#024E79] bg-[#0072B1] text-white font-[Rubik] text-[clamp(0.95rem,1.5vw,1.1rem)] font-medium shadow-md hover:border-[#0072B1] hover:bg-[#024E79] active:border-[#054F78] active:bg-[#033F61] transition duration-150">
+              <ion-icon name="eye-outline" className="text-[clamp(1.2rem,1.5vw,1.5rem)]"></ion-icon>
+              <span>View Resume</span>
+            </button>
+          </Link>
+        </div>
+
+        {/* Mobile Menu Icon */}
+        <div className="block md:hidden">
+          <button onClick={toggleMenu} className="text-white text-3xl">
+            <ion-icon name={isMenuOpen ? "close" : "menu"}></ion-icon>
+          </button>
+        </div>
       </div>
 
-      {/* Resume Button */}
-      <div>
-        <Link to="/resume" className="no-underline">
-          <button className="flex items-center justify-center gap-2 px-4 py-2 border-[1.3px] border-[#024E79] bg-[#0072B1] text-white font-[Rubik] text-[17.7px] leading-[25.3px] font-normal shadow-md hover:border-[#0072B1] hover:bg-[#024E79] active:border-[#054F78] active:bg-[#033F61]">
-            <ion-icon name="eye-outline" className="text-xl"></ion-icon>
-            View Resume
-          </button>
-        </Link>
-      </div>
+      {/* Mobile Dropdown Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden mt-4 px-[5vw]">
+          <ul className="flex flex-col gap-4 bg-[#0a192f] p-6 rounded-lg shadow-lg font-sora text-white">
+            {navLinks.map((path, idx) => (
+              <li key={path}>
+                <Link
+                  to={path}
+                  onClick={closeMenu}
+                  className={`block text-base no-underline ${
+                    location.pathname === path ? "font-bold" : "font-normal"
+                  }`}
+                >
+                  {labels[idx]}
+                </Link>
+              </li>
+            ))}
+
+            <li>
+              <Link to="/resume" onClick={closeMenu} className="no-underline">
+                <button className="w-full mt-2 flex items-center justify-center gap-2 px-4 py-2 border border-[#024E79] bg-[#0072B1] text-white font-[Rubik] text-base font-medium shadow-md hover:border-[#0072B1] hover:bg-[#024E79] active:border-[#054F78] active:bg-[#033F61] transition duration-150">
+                  <ion-icon name="eye-outline"></ion-icon>
+                  <span>View Resume</span>
+                </button>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
